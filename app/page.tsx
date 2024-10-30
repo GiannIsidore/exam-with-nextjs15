@@ -14,7 +14,7 @@ export default async function Page() {
   const response = await fetch('http://localhost/my-app/php/transaction.php?operation=fetchTransaction', {
     cache: 'no-store',
   });
-  
+
   const jsonData = await response.json();
   const transactions: Transaction[] = jsonData?.data ?? [];
 
